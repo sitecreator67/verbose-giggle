@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Генератор цитат</title>
+    <style>
+        body { font-family: Arial; text-align: center; margin-top: 100px; }
+        #quote { font-size: 24px; margin-bottom: 20px; width: 500px; margin-left:auto; margin-right:auto; }
+        button { padding: 10px 20px; font-size: 18px; cursor: pointer; }
+    </style>
+</head>
+<body>
+
+<div id="quote">Нажми кнопку, чтобы получить цитату</div>
+<button onclick="newQuote()">Случайная цитата</button>
+
+<script>
+    const quotes = [
+        "Если ворона летит жопой вперед - значит на улице сильный ветер.",
+         "Если закрыть глаза, станет темно.",
+          "Если ты заблудился в лесу, то просто иди домой.",
+           "Лучше иметь друга, чем друг друга.",
+            "Я живу, как карта ляжет. Ты живешь, как мамка скажет.",
+             "Взял нож - режь, взял дошик - ешь.",
+              "Никогда не сдавайтесь, идите к своей цели!А если будешь сложно - сдавайтесь.",
+         "Запомни: всего одна ошибкаа - и ты ошибся."
+    ];
+
+    function newQuote() {
+        const randomIndex = Math.floor(Math.random() * quotes.length);
+        document.getElementById("quote").innerText = quotes[randomIndex];
+    }
+</script>
+
+</body>
+</html>
